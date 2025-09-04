@@ -1,0 +1,124 @@
+/* --- Design tokens --- */
+:root{
+  --bg: #ffffff;
+  --bg-soft: rgba(255,255,255,0.7);
+  --text: #0b0b0e;
+  --muted: #6b7280;
+  --border: rgba(0,0,0,0.08);
+  --ring: rgba(99,102,241,0.4);
+  --brand: #4f46e5;
+  --brand-600: #4f46e5;
+  --brand-700: #4338ca;
+  --surface: #ffffff;
+  --shadow: 0 6px 24px rgba(0,0,0,0.06);
+  --radius: 16px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0a0a0a;
+    --bg-soft: rgba(10,10,10,0.7);
+    --text: #f4f4f5;
+    --muted: #a1a1aa;
+    --border: rgba(255,255,255,0.12);
+    --surface: #0b0b0e;
+    --shadow: 0 6px 24px rgba(0,0,0,0.35);
+  }
+}
+
+html,body,#root{height:100%;}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* --- Layout helpers --- */
+.container{
+  max-width: 80rem; /* 1280px */
+  margin-inline:auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px){ .container{ padding-inline: 1.5rem; } }
+@media (min-width: 1024px){ .container{ padding-inline: 2rem; } }
+
+.section{ padding: 3rem 0; }
+.section-title{
+  margin: 0 0 1.25rem 0;
+  font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2rem);
+  font-weight: 800;
+}
+
+/* --- Header --- */
+.site-header{
+  position: sticky; top:0; z-index:30;
+  backdrop-filter: saturate(180%) blur(10px);
+  background: color-mix(in oklab, var(--bg) 70%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .bar{
+  height: 56px; display:flex; align-items:center; justify-content:space-between;
+}
+.brand{ font-weight: 800; text-decoration:none; color:var(--text); display:flex; gap:.5rem; align-items:center; }
+.nav{ display:none; gap:1.25rem; font-size:.95rem; }
+@media (min-width:768px){ .nav{ display:flex; } }
+.nav a{ color:var(--text); text-decoration:none; opacity:.9 }
+.nav a:hover{ text-decoration: underline; }
+
+/* --- Buttons --- */
+.btn{ 
+  display:inline-flex; align-items:center; gap:.5rem;
+  border-radius: 12px; padding:.5rem .9rem; font-weight:600;
+  border:1px solid var(--border); background: transparent; color:var(--text);
+  transition: background .15s ease, border-color .15s ease, transform .05s;
+}
+.btn:hover{ background: color-mix(in oklab, var(--bg) 85%, var(--text) 3%); }
+.btn:active{ transform: translateY(1px); }
+.btn-primary{
+  background: var(--brand-600); color:#fff; border-color: color-mix(in oklab, var(--brand-600), #000 10%);
+}
+.btn-primary:hover{ background: var(--brand-700); }
+
+/* --- Cards / surfaces --- */
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+.card.soft{ background: color-mix(in oklab, var(--surface) 90%, transparent); }
+
+/* --- Badge --- */
+.badge{
+  display:inline-block; padding:.35rem .75rem; border-radius:999px; font-size:.9rem;
+  border:1px solid var(--border); background: color-mix(in oklab, var(--bg) 92%, transparent);
+}
+
+/* --- Grids --- */
+.grid-2{ display:grid; gap:1.25rem; }
+.grid-3{ display:grid; gap:1.25rem; }
+@media (min-width: 768px){
+  .grid-2{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .grid-3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+
+/* --- Hero --- */
+.hero{ padding-top: 3.5rem; padding-bottom: 2.5rem; }
+.hero-title{ font-size: clamp(2rem, 1.3rem + 2vw, 3rem); font-weight: 900; letter-spacing:-0.02em; margin:0; }
+.hero-sub{ margin-top:.5rem; font-size: clamp(1.1rem, .9rem + .5vw, 1.35rem); color: var(--muted); }
+.hero-blurb{ margin-top: 1rem; max-width: 52ch; color: var(--muted); }
+
+/* --- CV sheet for print --- */
+#cv-sheet{ border:1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 1.25rem; }
+@media print{ header, nav, footer, .no-print{ display:none !important; } #cv-sheet{ box-shadow:none; border:none; } }
+footer{ color: var(--muted); text-align:center; padding: 2.5rem 0; font-size:.95rem; }
+
+.small{ font-size:.9rem; color:var(--muted); }
+.muted{ color: var(--muted); }
+
+/* links */
+a{ color: inherit; }
+a.underline{ text-decoration: underline; text-underline-offset: 3px; }
+a.underline:hover{ text-decoration: none; }
