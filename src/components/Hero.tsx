@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, Phone, Download, Gamepad2 } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Gamepad2 } from "lucide-react";
 import { LINKS, PROFILE } from "../data";
 import profilePic from "../assets/Profile_icon.jpg";
 

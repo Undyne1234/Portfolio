@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { ACHIEVEMENTS, PROJECTS } from "../data";
+import { PROJECTS } from "../data";
 import { Section } from "./Section";
 import { Badge } from "./Badge";
 
