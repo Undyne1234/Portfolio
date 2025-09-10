@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, MapPin, Phone, Download, Gamepad2 } from "lucide-react";
 import { LINKS, PROFILE } from "../data";
+import profilePic from "../assets/Profile_icon.jpg";
 
 export const Hero = () => (
   <section id="home" className="container hero">
@@ -39,12 +40,14 @@ export const Hero = () => (
 
       <div >
         <div className="card">
-          <div  />
+          <div />
           <div className="">
             <Gamepad2 className="" />
           </div>
         </div>
-        <p className="small"><img src="/Profile_icon.jpg" alt="Profile picture" className="profile-pic" /></p>
+        <p className="small">
+          <img src={profilePic} alt="Profile picture" className="profile-pic" />
+        </p>
       </div>
     </div>
   </section>
