@@ -1,6 +1,6 @@
 import { CV as CVData, PROFILE } from "../data";
 import { Section } from "./Section";
-import { Download, ExternalLink, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export const CV = () => (
   <Section id="cv" title="Curriculum Vitae">
@@ -13,22 +13,6 @@ export const CV = () => (
         #cv-sheet { box-shadow: none !important; border: none !important; }
       }
     `}</style>
-
-    <div className="no-print">
-      <button
-        onClick={() => window.print()}
-        className="btn btn-primary"
-      >
-        <Download className="w-4 h-4" /> Download as PDF (Print)
-      </button>
-      <a
-        href={PROFILE.cvUrl}
-        target="_blank" rel="noreferrer"
-        className="btn"
-      >
-        <ExternalLink className="w-4 h-4" /> Fallback: Static PDF
-      </a>
-    </div>
 
     <div
       id="cv-sheet"

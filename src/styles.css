@@ -122,3 +122,13 @@ footer{ color: var(--muted); text-align:center; padding: 2.5rem 0; font-size:.95
 a{ color: inherit; }
 a.underline{ text-decoration: underline; text-underline-offset: 3px; }
 a.underline:hover{ text-decoration: none; }
+
+/* Profiel picture */
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;   /* circle */
+  object-fit: cover;    /* no distortion */
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+}

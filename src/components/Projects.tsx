@@ -4,19 +4,26 @@ import { Section } from "./Section";
 import { Badge } from "./Badge";
 
 export const About = () => (
-  <Section id="about" title="About me">
-    <div className="grid-3">
-      {ACHIEVEMENTS.map((a, i) => (
-        <div key={i} className="card soft">
-          <div >
-            <div className="badge">
-              <a.icon className="w-5 h-5" />
-            </div>
-            <h3 className="font-semibold">{a.title}</h3>
-          </div>
-          <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">{a.desc}</p>
-        </div>
-      ))}
+   <Section id="about" title="About me">
+    <div className="card soft">
+      <p>
+        Heyo, I'm <strong>Wesley</strong> who's both tech-geeky
+        and creative at heart. I love diving into new technologies, tinkering with code,
+        and turning ideas into working projects that actually make an impact.
+      </p>
+
+      <p className="mt-3">
+        When I'm not coding, you'll usually find me gaming, exploring the furry community, or spending time outdoors to recharge. I enjoy balancing
+        high-tech problem solving with a playful and social side.
+      </p>
+
+      <p className="mt-3">
+        I chose ICT because it combines everything I care about: creativity, logic,
+        and problem-solving. I've always been curious about how systems work behind
+        the scenes, and ICT gives me the chance to build tools that are both useful
+        and sustainable. For me, it's not just about writing code, but about shaping
+        technology that makes life better for people, and maybe even the planet.
+      </p>
     </div>
   </Section>
 );

@@ -18,15 +18,15 @@ export const LINKS = {
 
 export const SKILLS: Record<string, string[]> = {
   Languages: ["JavaScript/TypeScript", "Python", "Java", "SQL"],
-  "Frameworks & Tools": ["Svelte", "React", "Node.js", "Express", "Tailwind"],
-  Data: ["Pandas", "scikit-learn", "Time-series", "Azure Blob"],
+  "Frameworks & Tools": ["Svelte", "React", "Node.js", "Express", "Tailwind", "Laravel"],
+  Data: ["Pandas", "scikit-learn", "Time-series", "Azure Blob", "Image recognition"],
   DevOps: ["Docker", "Swagger/OpenAPI", "CI/CD basics"],
 };
 
 export const ACHIEVEMENTS = [
   {
     icon: Award,
-    title: "Byte-2-Green: carbon-smart app",
+    title: "MuseTrail: carbon-smart app",
     desc:
       "Microservice architecture (Gateway + services), gamified challenges, and stats. Led API design & MySQL schema.",
   },
@@ -42,39 +42,62 @@ export const ACHIEVEMENTS = [
     desc:
       "Java project showcasing design patterns (Factory, Builder, Strategy, State) with ASCII UI flair.",
   },
+  {
+    icon: Award,
+    title: "HZ Hackathon — WeatherVIS (2025)",
+    desc:
+      "Built a weather-visualization dashboard (WeatherVIS) in 24h with a small pack. I owned backend/API wiring and data shaping; shipped a demo from the repo.",
+  },
+  {
+    icon: GraduationCap,
+    title: "HZ DataFest — Digital History & Data Science (2025)",
+    desc:
+      "Presented how to preserve history digitally and apply data-science workflows (ingest, clean, analyze, visualize) to surface patterns and context over time.",
+  },
 ];
 
 export const PROJECTS = [
   {
-    name: "Byte-2-Green / MuseTrail",
+    name: "MuseTrail",
     tags: ["Svelte", "Node", "MySQL", "Docker"],
     blurb:
       "Web app that gamifies shrinking your digital footprint. Built microservices (Educational, Users, Gallery, Stats).",
-    links: [
-      { label: "Live", href: "https://example.com" },
-      { label: "Code", href: "https://github.com/your/repo" },
-    ],
+    links: [{ label: "Code", href: "https://github.com/orgs/Byte-2-Green/repositories" }],
   },
   {
     name: "WWTP Predictive Analytics",
     tags: ["Python", "Time-series", "sklearn"],
     blurb:
       "Merged KNMI weather + plant sensors, engineered features, and trained Random Forests to predict nitrate levels.",
-    links: [{ label: "Notebook", href: "https://github.com/your/repo" }],
+    links: [{ label: "Code", href: "" }],
   },
   {
     name: "Azure Fibonacci",
     tags: ["Azure Functions", "Node", "Blob"],
     blurb:
       "Serverless API comparing iterative vs DP approaches with persisted results and monitoring.",
-    links: [{ label: "Code", href: "https://github.com/your/repo" }],
+    links: [{ label: "Code", href: "https://github.com/Undyne1234/Fibinacci" }],
   },
   {
     name: "Dungeon Chronicles",
     tags: ["Java", "Design Patterns"],
     blurb:
       "Text-based RPG with clean package structure and extensible combat AI.",
-    links: [{ label: "Code", href: "https://github.com/your/repo" }],
+    links: [{ label: "Code", href: "https://github.com/Undyne1234/ShadowsOfFate" }],
+  },
+  {
+    name: "WeatherVIS (Hackathon)",
+    tags: ["Hackathon", "Frontend", "Data Viz"],
+    blurb:
+      "24h sprint: collaborative weather-visualization dashboard. I handled API integration and data shaping for charts.",
+    links: [{ label: "Repo", href: "https://github.com/itsMiniscule/WeatherVIS" }],
+  },
+  {
+    name: "DataFest — Digital History",
+    tags: ["Data Science", "Image recognition", "Visualization"],
+    blurb:
+      "Explored preserving history digitally and using data science to reveal trends across time.",
+    links: [],
   },
 ];
 
@@ -111,6 +134,24 @@ export const CV = {
         "Delivered notebooks with visual QA (correlations, residuals) and model evaluation.",
       ],
     },
+    {
+      role: "Hackathon Backend & Data Lead",
+      org: "HZ Hackathon — WeatherVIS",
+      period: "2024",
+      bullets: [
+        "Integrated weather APIs and normalized responses for chart-ready datasets under 24h constraints.",
+        "Shipped a working demo from the repo and co-presented architecture, assumptions, and next steps.",
+      ],
+    },
+    {
+      role: "Presenter — Digital History & Data Science",
+      org: "HZ DataFest",
+      period: "2025",
+      bullets: [
+        "Outlined an end-to-end pipeline to preserve historical data (ingest, cleaning, metadata, analysis, viz).",
+        "Demonstrated how feature engineering & visualization uncover temporal patterns and context.",
+      ],
+    },
   ],
   education: [
     {
@@ -121,7 +162,7 @@ export const CV = {
   ],
   skills: [
     "JavaScript/TypeScript, Node, Express, React/Svelte, Tailwind",
-    "Python, Pandas, scikit-learn, time-series",
+    "Python, Pandas, scikit-learn, time-series, Image recognition",
     "MySQL, Docker, Swagger/OpenAPI",
     "Azure Functions, Blob Storage",
   ],

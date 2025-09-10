@@ -1,9 +1,6 @@
-import { Code2, Download, Moon, Sun } from "lucide-react";
-import { PROFILE } from "../data";
-import { useDarkMode } from "../hooks/useDarkMode";
+import { Code2 } from "lucide-react";
 
 export const Header = () => {
-  const { enabled, setEnabled } = useDarkMode();
   return (
     <header className="site-header">
       <div className="container bar">
@@ -17,22 +14,6 @@ export const Header = () => {
           <a href="#cv" className="hover:underline">CV</a>
           <a href="#contact" className="hover:underline">Contact</a>
         </nav>
-        <div className="flex items-center gap-2">
-          <button
-            aria-label="Toggle theme"
-            className="btn"
-            onClick={() => setEnabled(!enabled)}
-          >
-            {enabled ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
-          <a
-            href={PROFILE.cvUrl}
-            className="btn"
-            target="_blank" rel="noreferrer"
-          >
-            <Download className="w-4 h-4" /> Resume
-          </a>
-        </div>
       </div>
     </header>
   );

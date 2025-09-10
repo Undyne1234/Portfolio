@@ -6,7 +6,7 @@ export const Contact = () => (
   <Section id="contact" title="Contact">
     <div className="card soft">
       <p className="small">
-        Sniffing around for a collaborator or hiring for a role? Howl at me via email or LinkedIn.
+        Looking for a collaborator or hiring for a role? Reach me through email or LinkedIn.
       </p>
       <div >
         <a href={`mailto:${PROFILE.email}`} className="btn btn-primary">

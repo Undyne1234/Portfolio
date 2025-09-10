@@ -12,16 +12,9 @@ export const Hero = () => (
           {PROFILE.title}
         </p>
         <p className="hero-blurb">
-          {PROFILE.blurb} — let’s build something pawsitively awesome.
+          {PROFILE.blurb} let’s build something pawsitively awesome.
         </p>
         <div >
-          <a
-            href={PROFILE.cvUrl}
-            target="_blank" rel="noreferrer"
-            className="btn btn-primary"
-          >
-            <Download className="w-4 h-4" /> Download CV
-          </a>
           <a
             href={LINKS.github}
             className="btn"
@@ -51,7 +44,7 @@ export const Hero = () => (
             <Gamepad2 className="" />
           </div>
         </div>
-        <p className="small"><img src="/Profile_icon.png" alt="Profile picture"/></p>
+        <p className="small"><img src="/Profile_icon.jpg" alt="Profile picture" className="profile-pic" /></p>
       </div>
     </div>
   </section>
