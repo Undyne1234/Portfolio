@@ -13,7 +13,7 @@ export const About = () => (
       </p>
 
       <p className="mt-3">
-        When I'm not coding, you'll usually find me gaming, exploring the furry community, or spending time outdoors to recharge. I enjoy balancing
+        When I'm not coding, you'll usually find me gaming or spending time outdoors to recharge. I enjoy balancing
         high-tech problem solving with a playful and social side.
       </p>
 
